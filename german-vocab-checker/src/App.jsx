@@ -6,16 +6,11 @@ export default function App() {
   const [topic, setTopic] = useState(null);
 
   useEffect(() => {
-    // Load all CSV files dynamically from public/data
-    const files = import.meta.glob("/public/data/*.csv");
-
-    // Extract topic names (remove path + .csv)
-    const topicNames = Object.keys(files).map((path) => {
-      const match = path.match(/\/([^/]+)\.csv$/);
-      return match ? match[1] : null;
-    }).filter(Boolean);
-
-    setTopics(topicNames);
+    // Fetch the file list dynamically using a static JSON manifest
+    fetch("/data/topics.json")
+      .then((res) => res.json())
+      .then((data) => setTopics(data))
+      .catch(() => console.error("❌ Cannot load topics.json"));
   }, []);
 
   if (topic) {
