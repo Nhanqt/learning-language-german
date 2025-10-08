@@ -53,7 +53,6 @@ export default function TopicQuiz({ topic, goBack }) {
       </button>
 
       <h2 style={{ textAlign: "center" }}>🗂 Chủ đề: {topic}</h2>
-      <p style={{ textAlign: "center", fontSize: 18 }}>Nhập từ tiếng Đức cho từng từ tiếng Việt:</p>
 
       <form onSubmit={handleSubmit}>
         <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -61,7 +60,7 @@ export default function TopicQuiz({ topic, goBack }) {
             <tr>
               <th style={{ borderBottom: "2px solid #ddd", padding: 10 }}>#</th>
               <th style={{ borderBottom: "2px solid #ddd", padding: 10 }}>🇻🇳 Tiếng Việt</th>
-              <th style={{ borderBottom: "2px solid #ddd", padding: 10 }}>🇩🇪 Tiếng Đức (bạn nhập)</th>
+              <th style={{ borderBottom: "2px solid #ddd", padding: 10 }}>🇩🇪 Tiếng Đức</th>
               <th style={{ borderBottom: "2px solid #ddd", padding: 10 }}>Kết quả</th>
             </tr>
           </thead>
