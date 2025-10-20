@@ -85,10 +85,10 @@ export default function TopicQuiz({ topic, goBack }) {
                 <td style={{ padding: 8, textAlign: "center" }}>
                   {submitted &&
                     (results[index] ? (
-                      <span style={{ color: "green" }}>✅</span>
+                      <span style={{ color: "green" }}></span>
                     ) : (
                       <span style={{ color: "red" }}>
-                        ❌ {words[index].German}
+                        {words[index].German}
                       </span>
                     ))}
                 </td>
